@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-16T07:27:34.824874900Z</date>
+  <millis>1681630054824</millis>
+  <nanos>874900</nanos>
+  <sequence>0</sequence>
+  <logger>task_1</logger>
+  <level>INFO</level>
+  <class>task_1</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Sort Array</message>
+</record>
+</log>
