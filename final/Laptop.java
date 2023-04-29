@@ -1,93 +1,72 @@
-import java.util.Objects;
+
 
 public class Laptop {
+    private String brand; // марка
+    private String model; // модель
+    private double price; // цена
+    private double screenSize; // размер экрана
+    private int ram; // объем оперативной памяти
+    private int storage; // объем накопителя
+    private String processor; // процессор
+    private String graphics_card; // видеокарта
 
-    /*
-     * 1 - ОЗУ
-     * 2 - Объем ЖД
-     * 3 - Операционная система
-     * 4 - Цвет
-     * */
+    private String OS_name;
 
-     private int ram; // 8, 16, 32, 64
-     private int hddSize; // 512, 1024, 2048
-     private String os; // Windows 10, Windows 11, MacOS, Linux
-     final String color; // black, silver, blue, white, red
-     final String manufacturer; // Lenovo, Apple, Asus, HP, Acer
- 
-     public Laptop(int ram, int hddSize, String os, String color, String manufacturer) {
-         this.manufacturer = manufacturer;
-         if (manufacturer.equalsIgnoreCase("apple"))
-             this.os = "MacOS";
-         else
-             this.os = os;
-         this.ram = ram;
-         this.hddSize = hddSize;
-         this.color = color;
-     }
- 
-     public void setRam(int ram) {
-         this.ram = ram;
-     }
- 
-     public void setHddSize(int hddSize) {
-         this.hddSize = hddSize;
-     }
- 
-     public void setOs(String os) {
-         this.os = os;
-     }
- 
-     public int getRam() {
-         return ram;
-     }
- 
-     public int getHddSize() {
-         return hddSize;
-     }
- 
-     public String getOs() {
-         return os;
-     }
- 
-     public boolean corresponds(Object o) {
-         if (this == o) return true;
-         if (o == null || getClass() != o.getClass()) return false;
-         Laptop laptop = (Laptop) o;
- 
-         boolean correspond = true;
-         if (laptop.getRam() > 0 && getRam() != laptop.getRam())
-             correspond = false;
- //        if (laptop.getHddSize() > 0)
- 
- //        return getRam() == laptop.getRam() && getHddSize() == laptop.getHddSize() && getOs().equals(laptop.getOs())
- //                && Objects.equals(color, laptop.color) && manufacturer.equals(laptop.manufacturer);
-             return correspond;
-     }
- 
-     @Override
-     public String toString() {
-         return "Laptop {" +
-                 manufacturer +
-                 ", ram: " + ram +
-                 ", hddSize: " + hddSize +
-                 ", os: '" + os + '\'' +
-                 ", color: '" + color + '\'' +
-                 '}';
-     }
- 
-     @Override
-     public boolean equals(Object o) {
-         if (this == o) return true;
-         if (o == null || getClass() != o.getClass()) return false;
-         Laptop laptop = (Laptop) o;
-         return getRam() == laptop.getRam() && getHddSize() == laptop.getHddSize() && getOs().equals(laptop.getOs())
-                 && Objects.equals(color, laptop.color) && manufacturer.equals(laptop.manufacturer);
-     }
- 
-     @Override
-     public int hashCode() {
-         return Objects.hash(getRam(), getHddSize(), getOs(), color, manufacturer);
-     }
-    
+
+    public Laptop(String brand, String model, double price, double screen_size, int ram, int storage, String processor, String graphics_card, String OS_name) {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+        this.screenSize = screen_size;
+        this.ram = ram;
+        this.storage = storage;
+        this.processor = processor;
+        this.graphics_card = graphics_card;
+        this.OS_name = OS_name;
+    }
+
+
+    public String getBrand() {
+        return brand;
+    }
+
+
+    public String getModel() {
+        return model;
+    }
+
+
+    public double getPrice() {
+        return price;
+    }
+
+
+    public double getScreenSize() {
+        return screenSize;
+    }
+
+
+    public int getRam() {
+        return ram;
+    }
+
+
+    public int getStorage() {
+        return storage;
+    }
+
+
+    public String getProcessor() {
+        return processor;
+    }
+
+
+    public String getGraphicsCard() {
+        return graphics_card;
+    }
+
+    public String getOS_name() {
+        return OS_name;
+    }
 }
+
